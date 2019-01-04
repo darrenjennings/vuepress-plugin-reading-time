@@ -31,6 +31,21 @@ Example output
 }
 ```
 
+### Overide
+
+You can override by specifying a readingTime object in frontmatter
+
+```
+---
+title: My great post!
+date: "2018-08-13T17:36:55.338Z"
+readingTime: { text: "Not so long!", minutes: 3 }
+---
+
+Some content here...
+```
+
+
 ## Options
 
 ### excludes
