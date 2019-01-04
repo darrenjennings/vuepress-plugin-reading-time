@@ -4,11 +4,17 @@ module.exports = (options = {}) => ({
   extendPageData ($page) {
     const {
       regularPath,
-      path
+      path,
+      frontmatter,
+      _strippedContent
     } = $page
 
-    if ($page.frontmatter && $page.frontmatter.readingTime) {
-      $page.readingTime = $page.frontmatter.readingTime
+    if (!_strippedContent){
+      return $page
+    }
+
+    if (frontmatter && frontmatter.readingTime) {
+      $page.readingTime = frontmatter.readingTime
       return $page
     }
 
@@ -21,7 +27,7 @@ module.exports = (options = {}) => ({
       return $page
     }
     
-    var stats = readingTime($page._strippedContent);
+    var stats = readingTime(_strippedContent);
     $page.readingTime = stats
     
     return $page
