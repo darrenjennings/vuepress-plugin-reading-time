@@ -2,7 +2,7 @@
 
 > reading time plugin to display how long a post takes to read
 
-![Npm build badge](https://img.shields.io/npm/v/vuepress-plugin-reading-time.svg?style=flat-square)
+[![Npm build badge](https://img.shields.io/npm/v/vuepress-plugin-reading-time.svg?style=flat-square)](https://www.npmjs.com/package/vuepress-plugin-reading-time)
 
 ```bash
 yarn add -D vuepress-plugin-reading-time
